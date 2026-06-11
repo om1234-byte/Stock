@@ -23,7 +23,7 @@ function NavBar() {
                     <form class="d-flex" role='search'>
                         <ul class='navbar-nav mb-lg-0'>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" text-decoration="none" href='http://localhost:3000'>Signup</a>
+                                <a class="nav-link active" aria-current="page" text-decoration="none" href='https://kynestock.netlify.app'>Signup</a>
                             </li>
                             <li class="nav-item">
                                 <Link class="nav-link active"  to='/about'>About</Link>

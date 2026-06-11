@@ -7,7 +7,7 @@ function OpenAccount() {
                  
                  <h1 className='mt-5'>Open a Kyne account</h1>
                  <p>Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and F&O trades.</p>
-                 <button className='p-2 btn btn-primary fs-5 mb-5' style={{width:"20%", margin: "0 auto"}}><a href="http://localhost:3000" style={{textDecoration: "none", color: "white"}}>Sign up Now</a></button>
+                 <button className='p-2 btn btn-primary fs-5 mb-5' style={{width:"20%", margin: "0 auto"}}><a href="https://kynestock.netlify.app" style={{textDecoration: "none", color: "white"}}>Sign up Now</a></button>
 
              </div>
         </div>
