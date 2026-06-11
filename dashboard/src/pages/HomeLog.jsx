@@ -23,6 +23,7 @@ const HomeLog = () => {
       );
       const { status, user } = data;
       setUsername(user);
+      console.log(username);
       return status
         ? toast(`Hello ${user}`, {
             position: "top-right",
