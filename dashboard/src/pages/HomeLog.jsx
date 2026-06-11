@@ -11,19 +11,21 @@ import { ToastContainer, toast } from "react-toastify";
 const HomeLog = () => {
   const navigate = useNavigate();
   const [cookies, removeCookie] = useCookies([]);
-  const [username, setUsername] = useState("");
+  const [, setUsername] = useState("");
   
   useEffect(() => {
     const verifyCookie = async () => {
-    
+    // console.log("verifyCookie called");
       const { data } = await axios.post(
         "https://stock-epyn.onrender.com",
         {},
         { withCredentials: true }
       );
+       // console.log("verify response:", data);
+
       const { status, user } = data;
       setUsername(user);
-      console.log(username);
+      
       return status
         ? toast(`Hello ${user}`, {
             position: "top-right",
@@ -31,7 +33,7 @@ const HomeLog = () => {
         : (removeCookie("token"), navigate("/login"));
     };
     verifyCookie();
-  }, [cookies, navigate, removeCookie]);
+  }, []);
   const Logout = () => {
     removeCookie("token");
     navigate("/signup");
@@ -49,3 +51,4 @@ const HomeLog = () => {
 export default HomeLog;
 
 
+//

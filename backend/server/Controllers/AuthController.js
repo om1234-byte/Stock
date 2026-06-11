@@ -11,9 +11,13 @@ module.exports.Signup = async (req, res, next) => {
     }
     const user = await User.create({ email, password, username, createdAt });
     const token = createSecretToken(user._id);
+   // console.log("Generated token:", token);
     res.cookie("token", token, {
       withCredentials: true,
-      httpOnly: false,
+      
+      httpOnly: true,
+      secure: true,
+      sameSite: "none"
     });
     res
       .status(201)
@@ -25,6 +29,7 @@ module.exports.Signup = async (req, res, next) => {
 };
 
 module.exports.Login = async (req, res, next) => {
+  
   try {
     const { email, password } = req.body;
     if(!email || !password ){
@@ -39,6 +44,9 @@ module.exports.Login = async (req, res, next) => {
       return res.json({message:'Incorrect password or email' }) 
     }
      const token = createSecretToken(user._id);
+
+  //   console.log("Generated token on login:", token);
+  //  console.log("User ID:", user._id);
      res.cookie("token", token, {
        withCredentials: true,
        httpOnly: false,

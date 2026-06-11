@@ -25,6 +25,7 @@ const handleSellClick = async () => {
         name: uid,
         qty: Number(stockQuantity),
         mode: "SELL",
+        price:100,
       });
 
       console.log("Sell order placed");
