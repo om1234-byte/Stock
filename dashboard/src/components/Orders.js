@@ -15,7 +15,7 @@ const Orders = () => {
 
     const CompleteFetch = async () =>{
      
-      await axios.get("http://localhost:3002/allOrders")
+      await axios.get("https://stock-epyn.onrender.com/allOrders")
       .then((res) => {
         console.log(res.data);
         console.log(res.data);

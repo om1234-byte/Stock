@@ -17,7 +17,7 @@ const HomeLog = () => {
     const verifyCookie = async () => {
     
       const { data } = await axios.post(
-        "http://localhost:3002",
+        "https://stock-epyn.onrender.com",
         {},
         { withCredentials: true }
       );

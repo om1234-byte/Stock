@@ -15,13 +15,13 @@ const SellActionWindow = ({ uid }) => {
   const generalContext = useContext(GeneralContext);
 const handleSellClick = async () => {
   try {
-    const res = await axios.get("http://localhost:3002/allHoldings");
+    const res = await axios.get("https://stock-epyn.onrender.com/allHoldings");
 
     const holdingQty =
       res.data.find((holding) => holding.name === uid)?.qty || 0;
 
     if (holdingQty >= Number(stockQuantity)) {
-      await axios.post("http://localhost:3002/newOrder", {
+      await axios.post("https://stock-epyn.onrender.com/newOrder", {
         name: uid,
         qty: Number(stockQuantity),
         mode: "SELL",

@@ -95,14 +95,15 @@ try {
 });
 
 
-  try {
-     mongoose.connect(url);
-    console.log("MongoDB connected successfully http://localhost:",PORT);
-  } catch (err) {
+ 
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log("MongoDB connected successfully");
+  })
+  .catch((err) => {
     console.error("MongoDB connection failed:", err);
-  }
-
-
+  });
 
 
 app.listen(PORT, async () => {
