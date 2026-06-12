@@ -1,6 +1,6 @@
 
 
-import Home from "../components/Home"; // Your master dashboard component
+import Home from "../components/Home"; 
 //import './HomeLog.css';
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -15,13 +15,13 @@ const HomeLog = () => {
   
   useEffect(() => {
     const verifyCookie = async () => {
-    // console.log("verifyCookie called");
+     console.log("verifyCookie called");
       const { data } = await axios.post(
         "https://stock-epyn.onrender.com",
         {},
         { withCredentials: true }
       );
-       // console.log("verify response:", data);
+        console.log("verify response:", data);
 
       const { status, user } = data;
       setUsername(user);
