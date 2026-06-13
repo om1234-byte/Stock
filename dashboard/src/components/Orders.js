@@ -18,7 +18,7 @@ const Orders = () => {
       await axios.get("https://stock-epyn.onrender.com/allOrders")
       .then((res) => {
         console.log(res.data);
-        console.log(res.data);
+    
         setAllOrder(res.data);
       })
       .catch((err) => console.error("Error fetching Orders:", err)); 
@@ -124,17 +124,13 @@ const Orders = () => {
           <div className="no-orders">
             <div className="empty-state">
               <img
-                src="/images/no-orders.svg"
-                alt="No orders"
-                className="empty-image"
+                src="no_order.webp"
+                alt="No orders yets"
+                className="image"
               />
               <h3>No {activeTab} orders found</h3>
-              <p>
-                {activeTab === "today"
-                  ? "You haven't placed any orders today"
-                  : `You don't have any ${activeTab} orders`}
-              </p>
-              <Link to="/" className="btn primary-btn">
+             
+              <Link to="/" className="btn primary-btn" style={{margin:"4px"}}>
                 Start Trading
               </Link>
             </div>

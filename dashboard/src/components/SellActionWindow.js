@@ -81,26 +81,3 @@ export default SellActionWindow;
 
 
 
-
-
-/* const handleCancelClick = () => {
-     let allHoldings =[]; 
-     axios.get("http://localhost:3002/allHoldings")
-      .then((res) => {
-        console.log(res.data);
-        allHoldings = res.data;
-      })
-      .catch((err) => console.error("Error fetching holdings:", err));
-  
-      let HoldingPresent = allHoldings.some((holding) => ( holding.name === uid) ? holding.qty : 0);
-      
-      if(HoldingPresent >= stockQuantity){
-      axios.post("http://localhost:3002/newOrder", {
-      name: uid,
-      qty: stockQuantity,
-      price: stockPrice,
-      mode: "SELL",
-    });
-  }
-    GeneralContext.closeBuyWindow();
-  }; */
