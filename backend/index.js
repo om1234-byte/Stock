@@ -109,7 +109,7 @@ mongoose
 
 app.listen(PORT, async () => {
   console.log("App started");
- console.log(`Server is running on port http://localhost:${PORT}`);
+ // console.log(`Server is running on port http://localhost:${PORT}`);
 });
 
 

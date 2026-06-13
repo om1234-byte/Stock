@@ -155,24 +155,4 @@ const Orders = () => {
 };
 
 export default Orders;
-/*
- {
 
-        id: "ORD12344",
-        type: "SELL",
-        symbol: "TATASTEEL",
-        quantity: 10,
-        price: 112.45,
-        status: "Completed",
-        time: "Yesterday, 2:30 PM"
-      },
-      {
-        id: "ORD12343",
-        type: "BUY",
-        symbol: "INFY",
-        quantity: 3,
-        price: 1550.20,
-        status: "Completed",
-        time: "Mar 15, 11:45 AM"
-      }
-*/
